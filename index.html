@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"> logo </a>
+        <input type="checkbox" class=" checkbox " id="check"> 
+         <label for="check" class="icons "> 
+          <i class="fa-solid fa-bars"  id="menu "></i> 
+           <i class="fa-solid fa-xmark" id="close"></i> 
+         </label>
+        <ul>
+            <li> <a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">work</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <img src="bg.jpg" alt="bgimg" id="bg" style="   position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;">
+        <h2 id="text"> parallax website </h2>
+        <a href="#sec" class="btn" id="explore"> explore </a> 
+        
+        <img src="mountains_behind.png" id="mountains_behind"  style="    position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;">
+        <img src="mountains_front.png" id="mountains_front"  style="  position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 115%;
+        object-fit: cover;
+        z-index: 11;">
+    </section>
+
+    <section id="sec" class="about">
+    <div>
+        <h2> Lorem ipsum dolor </h2>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, qui! Dolore perspiciatis ab nobis atque aperiam, repudiandae repellendus fuga alias ipsum illum earum nemo nisi. Est hic corporis debitis quia.
+        </p>
+        <a href="#">read more</a>
+    </div>
+    <div>
+        <img src="mg.png" alt="magic" data-tilt  data-tilt-glare data-tilt-max-glare="0.8">
+    </div>
+    
+</section>
+
+<section class="work">
+
+    <div class="card">
+        <div class="wrapper">
+            <img src="bg.jpg" class="bg-img" style=" height: 300px ; width: 210px;" >
+        </div>
+        <img src="jujutsu.png" class="title">
+        <img src="on hover.png" class="gojo">
+        
+    </div>
+
+    <div class="card">
+        <div class="wrapper">
+            <img src="bg2.jpg" class="bg-img" style=" height: 300px ; width: 210px; " >
+        </div>
+        <img src="one pice.png" class="title">
+        <img src="lufy.png" class="gojo">
+        
+    </div>
+
+    <div class="card">
+        <div class="wrapper">
+            <img src="bg2.jpg" class="bg-img" style=" height: 300px ; width: 210px; " >
+        </div>
+        <img src="one pice.png" class="title">
+        <img src="lufy.png" class="gojo">
+        
+    </div>
+
+    <div class="card">
+        <div class="wrapper">
+            <img src="bg2.jpg" class="bg-img" style=" height: 300px ; width: 210px; " >
+        </div>
+        <img src="one pice.png" class="title">
+        <img src="lufy.png" class="gojo">
+        
+    </div>
+
+
+
+
+
+
+
+</section>
+
+
+
+    <script>
+        let mountainsfront = document.getElementById('mountains_front');
+        let momountainsbehind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let bg = document.getElementById('bg');
+
+        window.addEventListener('scroll' , function(){
+            let value = window.scrollY;
+            bg.style.top = value*-.6 + 'px' ;
+            momountainsbehind.style.left = value* .25 + 'px' ;
+            text.style.marginRight = value* 3 + 'px' ;
+        })
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
