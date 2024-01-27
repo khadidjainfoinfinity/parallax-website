@@ -134,6 +134,7 @@ section.hero{
     display: flex;
     justify-content: center;
     align-items: center;
+    over-flow: hidden;
 }
 
 section.hero .img{
