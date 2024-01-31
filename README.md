@@ -1,1 +1,2 @@
-still working on it
+## parallaxe website design
+#### prallax effect hero section
